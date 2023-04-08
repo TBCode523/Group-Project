@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('styling/fonts/Montserrat/static/Montserrat-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.btn_text{
+    color: #324373;
+}
+.headings{
+    color: #F2C063;
+}
+body {
+    color: #F7F0DD;
+}

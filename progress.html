@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fitness Graph</title>
+<link href="styling/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<h1></h1>
+<p>Take a look at your latest progress</p>
+<canvas id = "workout_graph"></canvas>
+<script src="libraries\chart_lib\node_modules\chart.js\dist\chart.umd.js"></script>
+<script>
+const ctx = document.getElementById("workout_graph").getContext('2d');
+var lst = [];
+let date = new Date();
+for (let i = 0; i < 7; i++) {
+  var d = new Date();
+  d.setDate(Number(d.getDate()) - i);
+  lst.push((d.getMonth()+1) + '/' + d.getDate()); 
+}
+
+  new Chart(document.getElementById("workout_graph"), {
+    type: 'line',
+    data: {
+      labels: lst.reverse(),
+      datasets: [{
+        label: 'Workout1 Frequency',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      },
+      {
+        label: 'Workout2 Frequency',
+        data: [11, 18, 2, 4, 1, 2],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
