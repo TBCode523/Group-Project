@@ -5,10 +5,15 @@
 <link href="styling/styles.css" rel="stylesheet" />
 </head>
 <body>
-
-<h1></h1>
-<p>Take a look at your latest progress</p>
-<canvas id = "workout_graph"></canvas>
+<nav>
+  <ul>
+  <li><a href="dash.html">DASHBOARD</a></li>
+  <li><a href="plan.html">PLAN</a></li>
+  <li><a href="mood.html">MOOD</a></li>
+  <li><a href="#" class="active">PROGRESS</a></li>
+  </ul>
+</nav>
+<canvas id = "workout_graph" ></canvas>
 <script src="libraries\chart_lib\node_modules\chart.js\dist\chart.umd.js"></script>
 <script>
 const ctx = document.getElementById("workout_graph").getContext('2d');
@@ -19,19 +24,19 @@ for (let i = 0; i < 7; i++) {
   d.setDate(Number(d.getDate()) - i);
   lst.push((d.getMonth()+1) + '/' + d.getDate()); 
 }
-
+Chart.defaults.color = '#fff';
   new Chart(document.getElementById("workout_graph"), {
     type: 'line',
     data: {
       labels: lst.reverse(),
       datasets: [{
         label: 'Workout1 Frequency',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12, 19, 3, 5, 2, 3,4],
         borderWidth: 1
       },
       {
         label: 'Workout2 Frequency',
-        data: [11, 18, 2, 4, 1, 2],
+        data: [11, 18, 2, 4, 1, 2,7],
         borderWidth: 1
       }]
     },
@@ -40,7 +45,19 @@ for (let i = 0; i < 7; i++) {
         y: {
           beginAtZero: true
         }
-      }
+      },
+      layout: {
+            padding: {
+                top: 20
+            }
+            
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Workout Frequency (Weekly Chart)'
+            }
+        }
     }
   });
 </script>

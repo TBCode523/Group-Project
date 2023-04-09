@@ -10,12 +10,64 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Rubik';
+    src: url('fonts/Rubik/static/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+nav{
+    display: inline-block;
+    font-family: 'Rubik';
+}
+element.style {
+    width: 100%;
+    max-width: 700px;
+    padding-top: 20px;
+}
+canvas{
+    display: inline-block;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #035AA6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #035ACD;
+  }
+  .active {
+    background-color: #373740;
+  }
 .btn_text{
     color: #324373;
 }
 .headings{
     color: #F2C063;
 }
-p {
+body {
+    
+    background-color: #373740;
+}
+p{
     font-family: 'Hind_Madurai';
 }
