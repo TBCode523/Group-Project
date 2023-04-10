@@ -58,16 +58,79 @@ ul {
   .active {
     background-color: #373740;
   }
+
 .btn_text{
     color: #324373;
 }
 .headings{
     color: #F2C063;
 }
+.panel{
+    vertical-align: top;
+    background-color: #324373;
+    border-radius: 25px;
+    border: 3px solid #F7F0DD;
+    padding: 20px;
+    margin-top:50px;
+    margin-bottom:40px;
+    margin-left:20px;
+    display:inline-block;
+    width: 230px;
+    height: 500px;
+}
+.hor_scroll{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space:nowrap
+}
+.exercise_name{
+    width: 100px;
+    text-align: center;
+}
+.exercise_reps{
+    width: 30px;
+    text-align: center;
+}
+.exercise_quant{
+    width: 80px;
+    text-align: center;
+}
+.button{
+    color: #324373;
+    background-color: #F7F0DD;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Rubik';
+    text-align: center;
+    margin-top:0px;
+    padding:14px;
+    border: 3x solid #324373;
+}
+.img_btn{
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    top: 40%;
+    margin-left: 20px;
+    display:inline-block;
+}
+h1{
+    color: #F7F0DD;
+    font-size: 32px;
+    font-family: 'Montserrat';
+    text-align: center;
+    margin-top:0px;
+}
+
 body {
-    
     background-color: #373740;
+    margin:0;
+    padding:0;
+    height: 768px;
+    width: 1024px;
 }
 p{
+    color: #F7F0DD;
+    font-size: 17px;
     font-family: 'Hind_Madurai';
 }
