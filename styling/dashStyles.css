@@ -53,7 +53,8 @@
 }
 
 .tabcontent {
-    display:flex;
+    display: none;
+    /* display:flex; */
     flex-direction: column;
     color: #324373;
     background-color:#F7F0DD;
