@@ -34,10 +34,26 @@
             </div>
         </div>
           
-          <div id="Diet" class="tabcontent">
-            <h3>What I ate today</h3>
+          <div id="Diet" class="tabcontent" style="display: flex;flex-direction: column;">
+            <div class="modal-span">
+              <input type="text" id="todoInput" placeholder=" ">
+              <button id="todoBtn" onclick="todoAdd()">Add</button>
+            </div>
+            <br>
+            <div class="modal-span">
+              <ul id="todoList"></ul>
+            </div>
+            
+            <!-- <div class="modal-span">
+              <input type="text" id="todoInput" placeholder="Pad Thai">
+              <button id="todoBtn" onclick="todoAdd()">Add</button>
+            </div>
+            <ul id="todoList"></ul> -->
+            <!-- <h3>What I ate today</h3>
             <ul id="DietTable"></ul>
             <button id="dietEdit" class="btn-styled">Edit</button>
+            
+            
             <div id="dietModal" class="modal">
                 <div class="modal-content">
                   <div class="modal-span">
@@ -50,9 +66,9 @@
                     <button id="todoBtn" onclick="todoAdd()">Add</button>
                   </div>
                   
-                  <ul id="todoList"></ul>
+                  
                 </div>
-            </div>
+            </div> -->
             
           </div>
         </div>

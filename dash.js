@@ -54,7 +54,7 @@ var workoutModal = document.getElementById("workoutModal");
 var dietModal = document.getElementById("dietModal")
 // Get the button that opens the modal
 var workoutEditBtn = document.getElementById("workoutEdit");
-var dietEditBtn = document.getElementById("dietEdit");
+// var dietEditBtn = document.getElementById("dietEdit");
 
 // Get the <span> element that closes the modal
 var workoutSpan = document.getElementsByClassName("close-workout")[0];
@@ -64,28 +64,33 @@ var dietSpan = document.getElementsByClassName("close-diet")[0];
 workoutEditBtn.onclick = function() {
     workoutModal.style.display = "block";
 }
-dietEditBtn.onclick = function() {
-    dietModal.style.display = "block";
-}
+// dietEditBtn.onclick = function() {
+//     dietModal.style.display = "block";
+// }
 
 // When the user clicks on <span> (x), close the modal
 workoutSpan.onclick = function() {
     workoutModal.style.display = "none";
 }
-dietSpan.onclick = function() {
-    dietModal.style.display = "none";
-}
+// dietSpan.onclick = function() {
+//     dietModal.style.display = "none";
+// }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == workoutModal) {
-    workoutModal.style.display = "none";
-  }
-  if (event.target == dietModal) {
-    dietModal.style.display = "none";
-  }
-}
+// window.onclick = function(event) {
+//   if (event.target == workoutModal) {
+//     workoutModal.style.display = "none";
+//   }
+//   if (event.target == dietModal) {
+//     dietModal.style.display = "none";
+//   }
+// }
 
+/*
+  References: 
+  https://www.w3schools.com/howto/howto_js_todolist.asp
+  https://www.educative.io/answers/how-to-create-a-simple-to-do-list-with-html-css-and-js
+  */
 function todoAdd() {
   var list = document.getElementById('todoList');
   list.addEventListener('click', function(e) {
@@ -100,32 +105,23 @@ function todoAdd() {
   if (entry === '') {
     alert("Empty entry");
   } else {
-    var spanDiv = document.createElement('div');
     var spanValue = document.createElement('span');
     var spanBtn = document.createElement('button');
     spanBtn.className = "remove";
-    spanDiv.className = "modal-span";
-
+    
     spanValue.innerText = entry;
     spanBtn.innerText = "x";
     spanBtn.addEventListener('click', todoDelete);
     
-    spanDiv.appendChild(spanValue);
-    spanDiv.appendChild(spanBtn);
-    newItem.appendChild(spanDiv);
-
+    newItem.appendChild(spanValue);
+    newItem.appendChild(spanBtn);
+    
     document.getElementById('todoList').appendChild(newItem);
-    dietTable.appendChild(newItem);
   }
 
   document.getElementById('todoInput').value = "";
 
   function todoDelete() {
     document.getElementById('todoList').removeChild(newItem);
-    dietTable.removeChild(newItem); 
   }
-}
-
-function updateDietTable(){
-  
 }
