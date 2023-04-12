@@ -1,11 +1,77 @@
-<!--
-Put this under the <body> tag
-<nav>
-  <ul>
-  <li><a href="dash.html">DASHBOARD</a></li>
-  <li><a href="#" class="active">PLAN</a></li>
-  <li><a href="mood.html">MOOD</a></li>
-  <li><a href="progress.html">PROGRESS</a></li>
-  </ul>
-</nav>
--->
+<!DOCTYPE html>
+
+<html lang = "en">
+
+  <head>
+    <link href="styling/styles.css" rel="stylesheet" />
+    <script>
+      function deleteRow(o) {
+        var p = o.parentNode.parentNode;
+        p.parentNode.removeChild(p);
+      }
+      function addRow(o) {
+        var p = o.parentNode.parentNode;
+        var tab = p.getElementsByTagName("table")[0];
+        console.log(p)
+        console.log(tab)
+        var name=prompt("Enter the name of your exercise","N/A");
+        var reps=prompt("Enter the numer of reps per rounds","N/A");
+        var rounds=prompt("Enter the total number of rounds","N/A");
+        var start=prompt("Enter your starting quantity","N/A");
+        var inc=prompt("Enter your weekly increment","N/A");
+        var newRow = tab.insertRow();
+        newRow.innerHTML = "<td class=\"exercise_name\"><p>" + name + "</p></td><td class=\"exercise_reps\"><p>" + rounds + "x" + reps + "</p></td><td class=\"exercise_quant\"><p>" + start + "lb+" + inc + "</p></td><td><input type=\"button\" value=\"X\" onclick=\"deleteRow(this)\"/></td>";
+      }
+
+      function addDay() {
+        var days = document.getElementById("days")
+        var day=prompt("Which day of week?","N/A");
+        const newPanel = document.createElement("div");
+        newPanel.classList.add("panel")
+        newPanel.innerHTML = "<h1>" + day + "</h1>"
+          +"<table cellspacing=0>"
+          +"</table>"
+          +"<center><input type=\"button\" class = \"button\" value=\"ADD EXERCISE\" onclick=\"addRow(this)\"/> </center>";
+        days.appendChild(newPanel);
+      }
+    </script>
+  </head>
+
+  <body>  
+    <nav>
+      <ul>
+      <li><a href="dash.html">DASHBOARD</a></li>
+      <li><a href="#" class="active">PLAN</a></li>
+      <li><a href="mood.html">MOOD</a></li>
+      <li><a href="progress.html">PROGRESS</a></li>
+      </ul>
+    </nav>
+    <div class="hor_scroll">
+      <div id = "days" style = "display:inline-block">
+        <div class="panel">
+          <h1>Monday</h1>
+          <table cellspacing=0>
+            <tr>
+                <td class="exercise_name">
+                  <p>Bench Press</p>
+                </td>
+                <td class="exercise_reps">
+                  <p>3x5</p>
+                </td>
+                <td class="exercise_quant">
+                  <p>105lb+2.5</p>
+                </td>
+                <td>
+                  <input type="button" value="X" onclick="deleteRow(this)"/>
+                </td>
+            </tr>                                   
+          </table>
+          <center><input type="button" class = "button" value="ADD EXERCISE" onclick="addRow(this)"/> </center>
+        </div>
+      </div>
+      <button type="button" class = "img_btn" onclick="addDay()">
+        <img src="add.png" width = "80" height = "80"/>
+      </button>
+    </div>
+  </body>  
+</html>  
