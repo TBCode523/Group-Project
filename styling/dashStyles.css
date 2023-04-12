@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat/static/Montserrat-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Hind_Madurai';
+    src: url('fonts/Hind_Madurai/HindMadurai-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('fonts/Rubik/Rubik-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.btn-styled{
+    font-family: 'Rubik';
+    color: #324373;
+    background-color:#F7F0DD;
+}
+.headings{
+    font-family: 'Montserrat';
+    color: #F2C063;
+    font-size: 35px;
+}
+.page-background{
+    background-color:#373740;
+    text-align: center;
+}
+.tab {
+    overflow: hidden;
+    color: #324373;
+    border: 1px solid #ccc;
+    background-color:#F7F0DD;
+    border-radius: 25px;
+    display:grid;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 25px;
+}
+.tab button:hover {
+    background-color: #F2C063;
+}
+
+.tabcontent {
+    display: none;
+    color: #324373;
+    background-color:#F7F0DD;
+    border-radius: 25px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-family: 'Hind_Madurai';
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close-modal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-modal:hover,
+  .close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-span{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 10%;
+  }
+
+p {
+    font-family: 'Hind_Madurai';
+    color: #F7F0DD;
+    font-size: 25px;
+}
+
+/* 
+  Todo list 
+  References: https://www.w3schools.com/howto/howto_js_todolist.asp 
+  */
+  ul {
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  ul li {
+    list-style-type: none;
+    padding: 10px;
+    background: #eee;
+  }
+
+  ul li:nth-child(odd) {
+    background: white;
+  }
+
+  ul li:hover {
+    background: rgb(150, 150, 150);
+  }
+
+  ul li.checked {
+    text-decoration: line-through;
+  }
+
+  .remove {
+    position: relative;
+    left: 60px;
+  }

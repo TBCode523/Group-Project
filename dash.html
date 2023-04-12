@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <script src="dash.js" defer>
+        //  createTable([["row 1, cell 1", "row 1, cell 2"], ["row 2, cell 1", "row 2, cell 2"]]);
+    </script>
+    <head>
+        <link rel="stylesheet" href="styling/dashStyles.css">
+    </head>
+
+    <body class="page-background">
+        <div>
+            <h1 class="headings">Good Morning, Jasmine</h1>
+            <p>You haven't missed a workout in <u>22 days</u>!
+            <br> You didn't log your <u>mood and sleep yesterday</u>, would you like to?
+            </p>
+            
+        </div>
+        <div class="tab">
+            <div>
+                <button class="tablinks active" onclick="openCity(event, 'Workout')">Workout Routine</button>
+                <button class="tablinks" onclick="openCity(event, 'Diet')">Daily Diet</button>
+            </div>
+          <br>
+          <div id="Workout" class="tabcontent" style="display:flex">
+            <h3 >Todays Workout</h3>
+            <table id="WorkoutTable"></table>
+            <button id="workoutEdit" class="btn-styled">Edit</button>
+            <div id="workoutModal" class="modal">
+                <div class="modal-content">
+                  <span class="close-workout">&times;</span>
+                  <h3>Some text in the Modal..</h3>
+                </div>
+              
+            </div>
+        </div>
+          
+          <div id="Diet" class="tabcontent">
+            <h3>What I ate today</h3>
+            <ul id="DietTable"></ul>
+            <button id="dietEdit" class="btn-styled">Edit</button>
+            <div id="dietModal" class="modal">
+                <div class="modal-content">
+                  <div class="modal-span">
+                    <span><h1>What I ate today</h1></span>
+                    <button id="dietEdit" class="btn-styled close-diet">Close</button>
+
+                  </div>
+                  <div class="modal-span">
+                    <input type="text" id="todoInput" placeholder=" ">
+                    <button id="todoBtn" onclick="todoAdd()">Add</button>
+                  </div>
+                  
+                  <ul id="todoList"></ul>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    </body>
+    
+    
+</html>
