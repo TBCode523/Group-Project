@@ -29,7 +29,7 @@ nav ul {
     margin: 0;
     padding: 0;
     background-color: #035AA6;
-    width: 71%;
+    width: 100%;
     position:fixed;
     bottom: 0;
 
@@ -74,9 +74,6 @@ p{
 }
 .tab {
     width: 100%;
-    height: 100%;
-    max-width:1024px;
-    max-height: 768px;
     margin:auto;
     overflow: auto;
 } 
@@ -85,6 +82,12 @@ p{
 .main {
     width: 100%;
     padding-bottom: 60px;
+}
+
+#moodRow {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .moodSelection {
@@ -118,7 +121,10 @@ p{
 }
 
 #logButton {
-    margin-top: 23px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
     margin-bottom: 10px;
     font-family: 'Rubik';
     font-size: 15px;
