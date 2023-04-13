@@ -71,13 +71,14 @@ ul {
     border-radius: 25px;
     border: 3px solid #F7F0DD;
     padding: 20px;
-    margin-top:50px;
+    margin-top:60px;
     margin-bottom:40px;
     margin-left:20px;
     display:inline-block;
     width: 230px;
-    height: 500px;
+    height: 600px;
 }
+
 .hor_scroll{
     overflow-x: scroll;
     overflow-y: hidden;
