@@ -17,34 +17,28 @@
     font-style: normal;
 }
 nav{
-    display: inline-block;
+    list-style: none;
+    text-align: center;
     font-family: 'Rubik';
-}
-element.style {
-    width: 100%;
-    max-width: 700px;
-    padding-top: 20px;
 }
 canvas{
     display: inline-block;
 }
-ul {
-    list-style-type: none;
+nav ul {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: #035AA6;
-    position: fixed;
-    top: 0;
     width: 100%;
+    position:fixed;
+    bottom: 0;
   }
   
-  li {
-    float: left;
+  nav li {
+    display: inline;
   }
   
   li a {
-    display: block;
+    display: inline-block;
     text-align: center;
     padding: 14px 16px;
     color: #F7F0DD;
@@ -122,16 +116,103 @@ h1{
     text-align: center;
     margin-top:0px;
 }
-
+.body_text {
+    color: #F7F0DD;
+    font-family: 'Hind_Madurai';
+}
 body {
     background-color: #373740;
-    margin:0;
-    padding:0;
-    height: 768px;
-    width: 1024px;
+
 }
 p{
     color: #F7F0DD;
     font-size: 17px;
     font-family: 'Hind_Madurai';
+}
+
+/* Styling for mood tab */
+.main {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+#moodRow {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.moodSelection {
+    margin: 5px;
+    background-color: #F7F0DD;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100px;
+    height: 50px;
+    float: left;
+}
+  
+.moodSelection label span {
+    text-align: center;
+    padding: 13px;
+    display: block;
+    font-size: 18px;
+    font-family: 'Rubik';
+}
+  
+.moodSelection label input {
+    position: absolute;
+    display: none;
+    color: #fff !important;
+}
+
+.moodSelection label input + span{color: #fff;}
+
+.moodSelection input:checked + span {
+    background-color: #F2C063
+}
+
+#logButton {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    font-family: 'Rubik';
+    font-size: 15px;
+    color: #324373;
+    background-color: #F7F0DD;
+    border-radius: 5px;
+    width: 85px;
+    height: 40px;
+}
+
+#journal {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Hind_Madurai';
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.moodSummary {
+    border: 1px solid #fff;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#keeb {
+    padding-left: 110px;
+    width: 800px;
+    position: fixed;
+    bottom: 40px;
 }
