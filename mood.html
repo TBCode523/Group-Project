@@ -1,11 +1,179 @@
-<!--
-Put this under the <body> tag
-<nav>
-  <ul>
-  <li><a href="dash.html">DASHBOARD</a></li>
-  <li><a href="plan.html">PLAN</a></li>
-  <li><a href="#" class="active">MOOD</a></li>
-  <li><a href="progress.html">PROGRESS</a></li>
-  </ul>
-</nav>
--->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mood</title>
+    <link rel="stylesheet" href="styling/styles.css">
+
+  </head>
+  <body onload="display()">
+    <div class="tab">
+      <div class="main">
+        <h1 style="font-size: 30px; text-align: center; color: #F2C063; padding-top: 30px;">How are you feeling today?</h3>
+
+        <form id="moodForm">
+            <textarea rows="10" cols="70" id="journal" name="journal" placeholder="Type something..."></textarea>
+            <br/><br/>
+            <label class="body_text" style="font-size: 20px; display: block; text-align: center;">Hours of Sleep: &nbsp <input type="number" id="sleep" name="sleep" style="width: 50px; height: 25px;"></label>
+            <h1 style="font-size: 22px; text-align: center; color: #F2C063; padding-top: 30px;">Mood Board of the Day</h1>
+            
+            <div id="moodRow">
+              <div class="moodSelection">
+                <label>
+                  <input type="checkbox" id="mood_happy" name="mood_happy"><span style="color: #324373;">Happy</span>
+                </label>
+              </div>
+              <div class="moodSelection">
+                <label>
+                  <input type="checkbox" id="mood_hopeful" name="mood_hopeful"><span style="color: #324373;">Hopeful</span>
+                </label>
+              </div>
+              <div class="moodSelection">
+                <label>
+                  <input type="checkbox" id="mood_excited" name="mood_excited"><span style="color: #324373;">Excited</span>
+                </label>
+              </div>
+              <div class="moodSelection">
+                <label>
+                  <input type="checkbox" id="mood_sad" name="mood_sad"><span style="color: #324373;">Sad</span>
+                </label>
+              </div>
+              <div class="moodSelection">
+                <label>
+                  <input type="checkbox" id="mood_angry" name="mood_angry"><span style="color: #324373;">Angry</span>
+                </label>
+              </div>
+              <div class="moodSelection">
+                <label>
+                  <input type="checkbox" id="mood_stressed" name="mood_stressed"><span style="color: #324373;">Stressed</span>
+                </label>
+              </div>
+              <div class="moodSelection">
+                <label>
+                  <input type="checkbox" id="mood_reflective" name="mood_reflective"><span style="color: #324373;">Reflective</span>
+                </label>
+              </div>
+              <div class="moodSelection">
+                <label>
+                  <input type="checkbox" id="mood_relaxed" name="mood_relaxed"><span style="color: #324373;">Relaxed</span>
+                </label>
+              </div>
+              <div class="moodSelection">
+                <label>
+                  <input type="checkbox" id="mood_neutral" name="mood_neutral"><span style="color: #324373;">Neutral</span>
+                </label>
+              </div>
+            </div>
+            <br/><br/>
+            <div style="text-align: center;">
+              <button id="logButton" type="button" onclick="storeMood();clearInput();">Log Diary</button>
+            </div>
+        </form>
+
+        <div id="fakeKeyboard"></div>
+        <hr>
+
+        <div id="displayMood"></div>
+      </div>
+
+      <nav>
+        <ul>
+        <li><a href="dash.html">DASHBOARD</a></li>
+        <li><a href="plan.html">PLAN</a></li>
+        <li><a href="#" class="active">MOOD</a></li>
+        <li><a href="progress.html">PROGRESS</a></li>
+        </ul>
+      </nav>
+
+    </div>
+    
+
+    <script>
+      document.getElementById("journal").addEventListener("focus", showKeyboard);
+      document.getElementById("journal").addEventListener("focusout", hideKeyboard);
+      document.getElementById("sleep").addEventListener("focus", showKeyboard);
+      document.getElementById("sleep").addEventListener("focusout", hideKeyboard);
+
+      var moodTracker = [{
+        date: "February 27, 2023",
+        journal: "My day was pretty plain since I didn't get to do much. But I'm looking forward to the weekend at least.",
+        sleep: 8,
+        moods: ["Neutral", "Hopeful"]
+      }, {
+        date: "February 25, 2023",
+        journal: "This weekend has been amazing. Hanging out with friends was very refreshing and I didn't realize how much I missed being around them.",
+        sleep: 7.5,
+        moods: ["Happy", "Hopeful", "Reflective"]
+      }, {
+        date: "February 19, 2023",
+        journal: "I haven't journaled in a while because I've been so busy with school work. It's exhausting because I feel like I don't have time to do anything for myself.",
+        sleep: 6,
+        moods: ["Stressed", "Sad"]
+      }];
+
+      function showKeyboard() {
+        document.getElementById("fakeKeyboard").innerHTML = "<img id='keeb' src='keyboard.png'>";
+      }
+
+      function hideKeyboard() {
+        document.getElementById("fakeKeyboard").innerHTML = "";
+      }
+
+      function storeMood() {
+        var date = new Date();
+        var month = date.toLocaleString('default', {month: 'long'});
+        var dateInput = month + " " + date.getDate() + ", " + date.getFullYear();
+        var journalInput = document.getElementById("journal").value;
+        var sleepInput = document.getElementById("sleep").value;
+        var moodInput = []
+        if (document.getElementById("mood_happy").checked == true) {
+          moodInput.unshift("Happy");
+        } 
+        if (document.getElementById("mood_hopeful").checked == true) {
+          moodInput.unshift("Hopeful");
+        } 
+        if (document.getElementById("mood_excited").checked == true) {
+          moodInput.unshift("Excited");
+        } 
+        if (document.getElementById("mood_sad").checked == true) {
+          moodInput.unshift("Sad");
+        } 
+        if (document.getElementById("mood_angry").checked == true) {
+          moodInput.unshift("Angry");
+        } 
+        if (document.getElementById("mood_stressed").checked == true) {
+          moodInput.unshift("Stressed");
+        } 
+        if (document.getElementById("mood_reflective").checked == true) {
+          moodInput.unshift("Reflective");
+        } 
+        if (document.getElementById("mood_relaxed").checked == true) {
+          moodInput.unshift("Relaxed");
+        } 
+        if (document.getElementById("mood_neutral").checked == true) {
+          moodInput.unshift("Neutral");
+        } 
+
+        moodTracker.unshift({date: dateInput, journal: journalInput, sleep: sleepInput, moods: moodInput})
+        display();
+      }
+
+      function display() {
+        var result = "";
+        for (i = 0; i < moodTracker.length; i++) {
+          result += "<div class='moodSummary'><p><span class='headings'>Date: </span><span class='body_text'>" + moodTracker[i].date + "</span></p>";
+          result += "<p><span class='headings'>Journal: </span> <span class='body_text'>" + moodTracker[i].journal + "</span></p>";
+          result += "<p><span class='headings'>Hours Slept: </span> <span class='body_text'>" + moodTracker[i].sleep + "</span></p>";
+          result += "<p><span class='headings'>Mood Board: </span> <span class='body_text'>" + moodTracker[i].moods.join(', ') + "</span></p>"
+          result += "</div>"
+        }
+
+        document.getElementById("displayMood").innerHTML = result;
+      }
+
+      function clearInput() {
+        document.getElementById("moodForm").reset();
+      }
+      
+    </script>
+  </body>
+</html>

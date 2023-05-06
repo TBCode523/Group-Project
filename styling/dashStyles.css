@@ -1,0 +1,313 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat/static/Montserrat-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Hind_Madurai';
+    src: url('fonts/Hind_Madurai/HindMadurai-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('fonts/Rubik/Rubik-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.btn-styled{
+    font-family: 'Rubik';
+    color: #324373;
+    background-color:#F7F0DD;
+}
+.headings{
+    margin-top: 60px;
+    font-family: 'Montserrat';
+    color: #F2C063;
+    font-size: 35px;
+}
+.page-background{
+    background-color:#373740;
+    text-align: center;
+}
+.tab {
+    margin-top: 50px;
+    overflow: hidden;
+    color: #324373;
+    border: 1px solid #ccc;
+    background-color:#F7F0DD;
+    border-radius: 25px;
+    display:grid;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 25px;
+}
+.tab button:hover {
+    background-color: #F2C063;
+}
+
+.tabcontent {
+    display: none;
+    /* display:flex; */
+    flex-direction: column;
+    color: #324373;
+    background-color:#F7F0DD;
+    border-radius: 25px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-family: 'Hind_Madurai';
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 70%;
+  }
+  
+  /* The Close Button */
+  .close-modal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-modal:hover,
+  .close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-span{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 10%;
+    /* padding: 30px 40px; */
+    color: #324373;
+    text-align: center;
+  }
+
+  
+  /* Remove margins and padding from the list */
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  
+  /* Style the list items */
+  /*ul li {
+    cursor: pointer;
+    display: flex;
+    padding: 12px 8px 12px 40px;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;*/
+  
+    /* make the list items unselectable 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }*/
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  /*ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }*/
+  
+  /* Darker background-color on hover */
+  /*ul li:hover {
+    background: #ddd;
+  }*/
+  
+  /* When clicked on, add a background color and strike out text */
+  /* ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  } */
+  
+  /* Add a "checked" mark when clicked on */
+  /* ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  } */
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the input */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  
+  /* Style the "Add" button */
+  .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  
+  .addBtn:hover {
+    background-color: #bbb;
+  }
+
+p {
+    font-family: 'Hind_Madurai';
+    color: #F7F0DD;
+    font-size: 25px;
+}
+
+/*
+  Todo list 
+  References: https://www.w3schools.com/howto/howto_js_todolist.asp 
+  */
+  /* ul {
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  ul li {
+    list-style-type: none;
+    padding: 10px;
+    background: #eee;
+  }
+  ul li:nth-child(odd) {
+    background: white;
+  }
+  ul li:hover {
+    background: rgb(150, 150, 150);
+  }
+  ul li.checked {
+    text-decoration: line-through;
+  } 
+  .remove {
+    position: relative;
+    left: 60px;
+  } */
+
+
+  /* nav bar */
+nav{
+    list-style: none;
+    text-align: center;
+    font-family: 'Rubik';
+}
+canvas{
+    display: inline-block;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    background-color: #035AA6;
+    width: 100%;
+    position:fixed;
+    bottom: 0;
+
+}
+  
+nav li {
+    display: inline;
+}
+
+li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 40px;
+    color: #F7F0DD;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #035ACD;
+}
+.active {
+    background-color: #373740;
+}
+
+#keeb { 
+    width: 800px;
+}
