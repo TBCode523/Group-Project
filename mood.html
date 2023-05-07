@@ -160,7 +160,7 @@
       function display() {
         var result = "";
         for (i = 0; i < moodTracker.length; i++) {
-          result += "<div class='moodSummary'><p><span class='headings'>Date: </span><span class='body_text'>" + moodTracker[i].date + "</span></p>";
+          result += "<div class='tab'><p><span class='headings'>Date: </span><span class='body_text'>" + moodTracker[i].date + "</span></p>";
           result += "<p><span class='headings'>Journal: </span> <span class='body_text'>" + moodTracker[i].journal + "</span></p>";
           result += "<p><span class='headings'>Hours Slept: </span> <span class='body_text'>" + moodTracker[i].sleep + "</span></p>";
           result += "<p><span class='headings'>Mood Board: </span> <span class='body_text'>" + moodTracker[i].moods.join(', ') + "</span></p>"

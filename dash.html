@@ -4,12 +4,12 @@
         //  createTable([["row 1, cell 1", "row 1, cell 2"], ["row 2, cell 1", "row 2, cell 2"]]);
     </script>
     <head>
-        <link rel="stylesheet" href="styling/dashStyles.css">
+        <link rel="stylesheet" href="styling/styles.css">
     </head>
 
-    <body class="page-background">
+    <body>
         <div>
-            <h1 class="headings">Good Morning, Jasmine</h1>
+            <h1>Good Morning, Jasmine</h1>
             <p>You haven't missed a workout in <u>22 days</u>!
             <br> You didn't log your <u>mood and sleep yesterday</u>, would you like to?
             </p>
@@ -17,16 +17,16 @@
         </div>
         <div class="tab">
             <div>
-                <button class="tablinks active" onclick="openCity(event, 'Workout')">Workout Routine</button>
-                <button class="tablinks" onclick="openCity(event, 'Diet')">Daily Diet</button>
+                <button class="tablinks active btn" onclick="openCity(event, 'Workout')"  background-color: inherit;>Workout Routine</button>
+                <button class="tablinks btn" onclick="openCity(event, 'Diet')">Daily Diet</button>
             </div>
           <br>
           <div id="Workout" class="tabcontent" style="display:flex;flex-direction: column;">
-            <h3 >Todays Workout</h3>
+            <h2>Todays Workout</h2>
             <table id="WorkoutTable"></table>
-            <button id="workoutEdit" class="btn-styled">Edit</button>
+            <center><button id="workoutEdit" class="btn">Edit</button></center>
             <div id="workoutModal" class="modal">
-                <div class="modal-content">
+                <div class="tab">
                   <span class="close-workout">&times;</span>
                   <div id="workoutInput"></div>
                 </div>

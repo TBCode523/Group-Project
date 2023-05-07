@@ -31,7 +31,7 @@
         newPanel.innerHTML = "<h1>" + day + "</h1>"
           +"<table cellspacing=0>"
           +"</table>"
-          +"<center><input type=\"button\" class = \"button\" value=\"ADD EXERCISE\" onclick=\"addRow(this)\"/> </center>";
+          +"<center><input type=\"button\" class = \"btn\" value=\"ADD EXERCISE\" onclick=\"addRow(this)\"/> </center>";
         days.appendChild(newPanel);
       }
     </script>
@@ -48,7 +48,7 @@
     </nav>
     <div class="hor_scroll">
       <div id = "days" style = "display:inline-block">
-        <div class="panel">
+        <div class="panel" >
           <h1>Monday</h1>
           <table cellspacing=0>
             <tr>
@@ -66,7 +66,7 @@
                 </td>
             </tr>                                   
           </table>
-          <center><input type="button" class = "button" value="ADD EXERCISE" onclick="addRow(this)"/> </center>
+          <center><input type="button" class = "btn" value="Add Exercise" onclick="addRow(this)"/> </center>
         </div>
       </div>
       <button type="button" class = "img_btn" onclick="addDay()">

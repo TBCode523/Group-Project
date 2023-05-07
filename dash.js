@@ -82,7 +82,7 @@ workoutEditBtn.onclick = function() {
     for(var i = 0; i < workoutList.length; i++) {
         var temp = workoutList[i];
         var idName = "workoutStatus" + i;
-        res += "<p style='color: #035AA6'>" + temp[0] + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + temp[1] + "</p>";
+        res += "<p>" + temp[0] + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + temp[1] + "</p>";
         res += "<select id=" + idName + "><option value='notAttempted'>Not Attempted</option><option value='completed'>Completed</option><option value='failed'>Failed</option></select>";
     }
     document.getElementById("workoutInput").innerHTML = res;

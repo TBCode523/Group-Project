@@ -60,16 +60,16 @@ nav ul {
     color: #F2C063;
 }
 .panel{
+    border: 1px solid #F7F0DD;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
     vertical-align: top;
-    background-color: #324373;
-    border-radius: 25px;
-    border: 3px solid #F7F0DD;
-    padding: 20px;
-    margin-top:60px;
+    margin-top:40px;
     margin-bottom:40px;
     margin-left:20px;
     display:inline-block;
-    width: 230px;
+    width: 350px;
     height: 600px;
 }
 
@@ -79,20 +79,21 @@ nav ul {
     white-space:nowrap
 }
 .exercise_name{
-    width: 100px;
+    width: 170px;
     text-align: center;
 }
 .exercise_reps{
-    width: 30px;
+    width: 50px;
     text-align: center;
 }
 .exercise_quant{
-    width: 80px;
+    width: 100px;
     text-align: center;
 }
-.button{
+.btn{
     color: #324373;
-    background-color: #F7F0DD;
+    width: fit-content;
+    background-color: #F7F0DD ;
     border-radius: 10px;
     font-size: 20px;
     font-family: 'Rubik';
@@ -110,10 +111,17 @@ nav ul {
     display:inline-block;
 }
 h1{
-    color: #F7F0DD;
+    color: #F2C063 ;
     font-size: 32px;
     font-family: 'Montserrat';
     text-align: center;
+    margin-top:0px;
+}
+
+h2{
+    color: #F2C063;
+    font-size: 20px;
+    font-family: 'Montserrat';
     margin-top:0px;
 }
 .body_text {
@@ -126,7 +134,7 @@ body {
 }
 p{
     color: #F7F0DD;
-    font-size: 17px;
+    font-size: 22px;
     font-family: 'Hind_Madurai';
 }
 
@@ -163,10 +171,10 @@ p{
 .moodSelection label input {
     position: absolute;
     display: none;
-    color: #fff !important;
+    color: #F7F0DD;
 }
 
-.moodSelection label input + span{color: #fff;}
+.moodSelection label input + span{color: #F7F0DD;}
 
 .moodSelection input:checked + span {
     background-color: #F2C063
@@ -203,11 +211,38 @@ input[type=number]::-webkit-outer-spin-button
   margin: 0;
 }
 
-.moodSummary {
+.tab {
     border: 1px solid #fff;
     border-radius: 8px;
     margin: 10px;
     padding: 10px;
+    display:grid;
+}
+
+.tab button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 25px;
+}
+
+
+.tabcontent {
+    display: none;
+    /* display:flex; */
+    flex-direction: column;
+    color: #F7F0DD;
+    padding: 6px 12px;
+    border-top: none;
+    font-family: 'Hind_Madurai';
+}
+
+.btn-styled{
+    font-family: 'Rubik';
+    color: #324373;
+    background-color:#F7F0DD;
 }
 
 #keeb {
